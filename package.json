@@ -1,0 +1,27 @@
+{
+  "name": "bingwallpaper",
+  "version": "1.0.0",
+  "description": "Download the bing wallpaper",
+  "main": "bingwallpaper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JOHNEPPILLAR/BingWallpaper.git"
+  },
+  "keywords": [
+    "Bing"
+  ],
+  "author": "JP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JOHNEPPILLAR/BingWallpaper/issues"
+  },
+  "homepage": "https://github.com/JOHNEPPILLAR/BingWallpaper#readme",
+  "dependencies": {
+    "dotenv": "*",
+    "request": "*",
+    "cheerio": "*"
+  }
+}
