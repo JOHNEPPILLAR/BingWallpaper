@@ -1,13 +1,36 @@
-var request  = require('request'),
-    fs       = require('fs'),
-    filepath = '/users/johnpillar/Pictures/bing-wallpaper/';
+var request    = require('request'),
+    fs         = require('fs'),
+    folderpath = '/users/johnpillar/Pictures/bing-wallpaper';
 
-function prepfolderlocation (result) {
-    fs.stat(filepath, function (err, stats) {
+rmDir = function(dirPath, removeSelf) {
+    if (removeSelf === undefined)
+        removeSelf = true;
+    try { var files = fs.readdirSync(dirPath); }
+    catch(e) { return; }
+    if (files.length > 0)
+        for (var i = 0; i < files.length; i++) {
+            var filePath = dirPath + '/' + files[i];
+            if (fs.statSync(filePath).isFile())
+                fs.unlinkSync(filePath);
+            else
+                rmDir(filePath);
+            }
+    if (removeSelf)
+        fs.rmdirSync(dirPath);
+};
+
+prepfolderlocation = function (dirpath, result) {
+
+    // Remove folder contents
+    console.log ('Removing contents of folder: ' + dirpath);
+    rmDir (folderpath, false);
+
+    // If folder does not exist create it
+    fs.stat(dirpath, function (err, stats) {
         if (err) {
             // Directory doesn't exist or some other error
-            console.log('Folder doesn\'t exist, so I made the folder: ' + filepath);
-            fs.mkdir(filepath);
+            console.log('Folder doesn\'t exist, so I made the folder: ' + dirpath);
+            fs.mkdir(dirpath);
         };
     });
 };
@@ -30,7 +53,7 @@ function downloadwallpaper (result) {
                     var filename = imageUrl.replace(/^.*[\\\/]/, '');
                     
                     // Save file
-                    fs.writeFile(filepath + filename, body, 'binary', function (err) {});
+                    fs.writeFile(folderpath + '/' + filename, body, 'binary', function (err) {});
                     console.log ('Downloaded and saved today\'s bing wallpaper.');
 
                 } else {
@@ -45,5 +68,5 @@ function downloadwallpaper (result) {
     return true;
 };
 
-prepfolderlocation();
+prepfolderlocation(folderpath);
 downloadwallpaper ();
