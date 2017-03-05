@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+   <key>Label</key>
+   <string>bing.dailywallpaper.mac</string>
+   <key>Program</key>
+   <string>/usr/local/bin/node /Users/johnpillar/Applications/BingWallpaper/bingwallpaper.js</string>
+
+  <key>StandardOutPath</key>
+  <string>/Users/johnpillar/Applications/BingWallpaper/launchdOutput.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/johnpillar/Applications/BingWallpaper/launchdErrors.log</string>
+
+   <key>RunAtLoad</key>
+   <true/>
+	<key>StartInterval</key>
+      <integer>3600</integer>
+   <key>StartCalendarInterval</key>
+   <dict>
+      <key>Minute</key>
+      <integer>0</integer>
+      <key>Hour</key>
+      <integer>4</integer>
+   </dict>
+
+
+</dict>
+</plist>
