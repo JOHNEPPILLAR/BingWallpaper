@@ -1,9 +1,7 @@
 # bing-wallpaper-for-mac
-Bing wallpaper for mac
+Daily Bing wallpaper for mac
 
 ###Notes
-
--  The app calls the node script on execution.
 -  In order to save space, the script assumes that *only 1 image* is kept in the ~/Pictures/bing-wallpaper folder.
 -  Place all the files into a single folder. Here it is in the Applications folder within the user's home directory - `~/Applications/BingWallpaper`
 -  Open the plist file with your favorite editor and change the username to your username
