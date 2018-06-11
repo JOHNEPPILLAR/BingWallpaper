@@ -20,8 +20,8 @@
   },
   "homepage": "https://github.com/JOHNEPPILLAR/BingWallpaper#readme",
   "dependencies": {
+    "cheerio": "*",
     "dotenv": "*",
-    "request": "*",
-    "cheerio": "*"
+    "request": "^2.87.0"
   }
 }
