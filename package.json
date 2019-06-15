@@ -22,6 +22,11 @@
   "dependencies": {
     "cheerio": "*",
     "dotenv": "*",
-    "request": "^2.87.0"
+    "request": "^2.88.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.17.3"
   }
 }
