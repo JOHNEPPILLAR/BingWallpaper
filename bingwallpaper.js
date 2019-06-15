@@ -57,7 +57,7 @@ function downloadWallpaper() {
         request(imageUrl, { encoding: 'binary' }, (imageError, imageResponse, body) => {
           if (!imageError && imageResponse.statusCode === 200) {
             // Save image
-            const filename = imageUrl.replace(/^.*[\\\/]/, '');
+            const filename = `${jsonObj.images[0].hsh}.jpg`;
             fs.writeFile(`${folderpath}/${filename}`, body, 'binary', () => {});
             console.log("Downloaded and saved today's bing wallpaper.");
           } else {
