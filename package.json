@@ -1,7 +1,7 @@
 {
   "name": "bingwallpaper",
   "version": "1.0.0",
-  "description": "Download the bing wallpaper",
+  "description": "Daily Bing wallpaper for Mac",
   "main": "bingwallpaper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,9 @@
     "url": "git+https://github.com/JOHNEPPILLAR/BingWallpaper.git"
   },
   "keywords": [
-    "Bing"
+    "Bing",
+    "Wallpaper",
+    "Mac"
   ],
   "author": "JP",
   "license": "ISC",
@@ -20,8 +22,6 @@
   },
   "homepage": "https://github.com/JOHNEPPILLAR/BingWallpaper#readme",
   "dependencies": {
-    "cheerio": "*",
-    "dotenv": "*",
     "request": "^2.88.0"
   },
   "devDependencies": {
