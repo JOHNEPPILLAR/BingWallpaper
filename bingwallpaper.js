@@ -54,16 +54,26 @@ function downloadWallpaper() {
       if (!imageDataerror && imageDataresponse.statusCode === 200) {
         const jsonObj = JSON.parse(data);
         const imageUrl = `https://www.bing.com${jsonObj.images[0].url}`;
-        request(imageUrl, { encoding: 'binary' }, (imageError, imageResponse, body) => {
-          if (!imageError && imageResponse.statusCode === 200) {
-            // Save image
-            const filename = `${jsonObj.images[0].hsh}.jpg`;
-            fs.writeFile(`${folderpath}/${filename}`, body, 'binary', () => {});
-            console.log("Downloaded and saved today's bing wallpaper.");
-          } else {
-            console.log('Error getting bing wallpaper image.');
-          }
-        });
+        request(
+          imageUrl,
+          { encoding: 'binary' },
+          (imageError, imageResponse, body) => {
+            if (!imageError && imageResponse.statusCode === 200) {
+              // Save image
+              //const filename = `${jsonObj.images[0].hsh}.jpg`;
+              const filename = 'bing.jpg';
+              fs.writeFile(
+                `${folderpath}/${filename}`,
+                body,
+                'binary',
+                () => {},
+              );
+              console.log("Downloaded and saved today's bing wallpaper.");
+            } else {
+              console.log('Error getting bing wallpaper image.');
+            }
+          },
+        );
       } else {
         console.log('Error getting bing wallpaper data.');
       }

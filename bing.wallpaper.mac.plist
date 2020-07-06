@@ -7,14 +7,14 @@
 	<key>ProgramArguments</key>
 	<array>
 		<string>/usr/local/bin/node</string>
-		<string>/Users/johnpillar/Applications/BingWallpaper/bingwallpaper.js</string>
+		<string>/Users/jp/Applications/BingWallpaper/bingwallpaper.js</string>
 	</array>
 	<key>RunAtLoad</key>
 	<true/>
 	<key>StandardErrorPath</key>
-	<string>/Users/johnpillar/Applications/BingWallpaper/launchdErrors.log</string>
+	<string>/Users/jp/Applications/BingWallpaper/launchdErrors.log</string>
 	<key>StandardOutPath</key>
-	<string>/Users/johnpillar/Applications/BingWallpaper/launchdOutput.log</string>
+	<string>/Users/jp/Applications/BingWallpaper/launchdOutput.log</string>
 	<key>StartCalendarInterval</key>
 	<dict>
 		<key>Hour</key>
