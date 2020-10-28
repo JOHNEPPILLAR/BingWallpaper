@@ -60,8 +60,7 @@ function downloadWallpaper() {
           (imageError, imageResponse, body) => {
             if (!imageError && imageResponse.statusCode === 200) {
               // Save image
-              //const filename = `${jsonObj.images[0].hsh}.jpg`;
-              const filename = 'bing.jpg';
+              const filename = `${jsonObj.images[0].hsh}.jpg`;
               fs.writeFile(
                 `${folderpath}/${filename}`,
                 body,
